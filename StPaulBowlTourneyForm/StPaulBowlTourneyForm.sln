@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{F36C7EC8-B8CC-4228-A1A3-7FD847CD3DFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StPaulBowlTourneyForm.Uploader", "StPaulBowlTourneyForm.Uploader\StPaulBowlTourneyForm.Uploader.csproj", "{5A9572F0-0207-44C1-96F9-4657F63CCD5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StPaulBowlTourneyForm.Test", "StPaulBowlTourneyForm.Test\StPaulBowlTourneyForm.Test.csproj", "{2522CDAF-B81E-4278-87CB-EBD6BCB9EC3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A9572F0-0207-44C1-96F9-4657F63CCD5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A9572F0-0207-44C1-96F9-4657F63CCD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A9572F0-0207-44C1-96F9-4657F63CCD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A9572F0-0207-44C1-96F9-4657F63CCD5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2522CDAF-B81E-4278-87CB-EBD6BCB9EC3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2522CDAF-B81E-4278-87CB-EBD6BCB9EC3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2522CDAF-B81E-4278-87CB-EBD6BCB9EC3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2522CDAF-B81E-4278-87CB-EBD6BCB9EC3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rpgcor.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = StPaulBowlTourneyForm.Test\\StPaulBowlTourneyForm.Test.csproj
+		SccProjectName1 = StPaulBowlTourneyForm.Test
+		SccLocalPath1 = StPaulBowlTourneyForm.Test
+		SccProjectUniqueName2 = StPaulBowlTourneyForm.Uploader\\StPaulBowlTourneyForm.Uploader.csproj
+		SccProjectName2 = StPaulBowlTourneyForm.Uploader
+		SccLocalPath2 = StPaulBowlTourneyForm.Uploader
+	EndGlobalSection
+EndGlobal

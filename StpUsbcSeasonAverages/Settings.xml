@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+    <Season>2019-20</Season>
+    <YearbookCSV>C:\Users\rgau1\Desktop\Extras\STPUsbc\SeasonAverages\{0}\YearbookYouthInput.csv</YearbookCSV>
+    <YearbookUploadOutputFile>C:\Users\rgau1\Desktop\Extras\STPUsbc\SeasonAverages\{0}\Yearbook-Youth-{0}_upload.csv</YearbookUploadOutputFile>
+    <Booklet>
+        <CoverFile>C:\Users\rgau1\Desktop\Extras\STPUsbc\SeasonAverages\2019-20\StPaulUSBC-SeasonAverageCover-Youth.pdf</CoverFile>
+        <BackFile>C:\Users\rgau1\Desktop\Extras\STPUsbc\SeasonAverages\2019-20\StPaulUSBC-SeasonAverageBack.pdf</BackFile>
+        <FooterFile>C:\Users\rgau1\Desktop\Extras\STPUsbc\SeasonAverages\StPaulUSBC-SeasonAverageFooter.pdf</FooterFile>
+        <BlankFile>C:\Users\rgau1\Desktop\Extras\STPUsbc\SeasonAverages\StPaulUSBC-SeasonAverageBlank.pdf</BlankFile>
+        <OutputFile>C:\Users\rgau1\Desktop\Extras\STPUsbc\SeasonAverages\2019-20\StPaulUSBC_2019-20_SeasonAverageBooklet-Youth.pdf</OutputFile>
+    </Booklet>
+    <AveragePage>
+        <RowsPerPage>73</RowsPerPage>
+        <!--72 for youth, 73 for adults-->
+        <FontSize>8</FontSize>
+        <CenterColumnIndex>6</CenterColumnIndex>
+        <Margins InTop="0.25" InBottom="0" InRight="0.65" InLeft="0.65"/>
+        <Headers>
+            <Header Text="Name" Width="1.7" Align="LEFT" />
+            <Header Text="National ID" Width="0.65" Align="RIGHT" />
+            <Header Text="Avg" Width="0.45" Align="RIGHT" />
+            <Header Text="Gms" Width="0.30" Align="RIGHT" />
+            <Header Text="League" Width="0.45" Align="RIGHT" />
+
+            <Header Text="" Width="0.04" Align="CENTER" />
+            <Header Text="" Width="0.02" Align="CENTER" />
+            <Header Text="" Width="0.04" Align="CENTER" />
+
+            <Header Text="Name" Width="1.7" Align="LEFT" />
+            <Header Text="National ID" Width="0.65" Align="RIGHT" />
+            <Header Text="Avg" Width="0.45" Align="RIGHT" />
+            <Header Text="Gms" Width="0.30" Align="RIGHT" />
+            <Header Text="League" Width="0.45" Align="RIGHT" />
+        </Headers>
+        <!--YOUTH
+        <Headers>
+            <Header Text="Name" Width="1.5" Align="LEFT" />
+            <Header Text="National ID" Width="0.55" Align="RIGHT" />
+            <Header Text="Avg" Width="0.30" Align="RIGHT" />
+            <Header Text="Gms" Width="0.30" Align="RIGHT" />
+            <Header Text="League" Width="0.9" Align="RIGHT" />
+
+            <Header Text="" Width="0.04" Align="CENTER" />
+            <Header Text="" Width="0.02" Align="CENTER" />
+            <Header Text="" Width="0.04" Align="CENTER" />
+
+            <Header Text="Name" Width="1.5" Align="LEFT" />
+            <Header Text="National ID" Width="0.55" Align="RIGHT" />
+            <Header Text="Avg" Width="0.30" Align="RIGHT" />
+            <Header Text="Gms" Width="0.30" Align="RIGHT" />
+            <Header Text="League" Width="0.9" Align="RIGHT" />
+        </Headers>
+        -->        
+    </AveragePage>
+</Settings>

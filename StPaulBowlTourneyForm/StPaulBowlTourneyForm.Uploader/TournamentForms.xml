@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<Setting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Destination>
+		<FtpSite>ftp://ftp.stpaulusbc.org/</FtpSite>
+		<Username>stpusbcryang</Username>
+		<Password>STP@Rustydog08</Password>
+		<RootFolder>Uploads/Files</RootFolder>
+	</Destination>
+	<Tournaments>
+		<Tournament Name="700 Club" BaseFolder="Tournaments/700Club">
+			<Form DisplayName="Flyer" FileName="700clubflyer.pdf"/>
+		</Tournament>
+		<Tournament Name="Junior Match Game" BaseFolder="Tournament_Forms">
+			<Form DisplayName="Entry Form" FileName="singles.pdf" />
+		</Tournament>
+		<Tournament Name="Mama/Papa Vitale" BaseFolder="Tournament_Forms">
+			<Form DisplayName="Entry Form" FileName="mama-papa-vitale.pdf" />
+		</Tournament>
+		<Tournament Name="Masters" BaseFolder="Tournament_Forms">
+			<Form DisplayName="Entry Form" FileName="masters.pdf" />
+		</Tournament>
+		<Tournament Name="Mixed Team Challenge" BaseFolder="Tournament_Forms">
+			<Form DisplayName="Entry Form" FileName="mixedteamchallenge.pdf" />
+		</Tournament>
+		<Tournament Name="Most Improved Average" BaseFolder="Tournament_Forms">
+			<Form DisplayName="Entry Form" FileName="MostImprovedAverage.pdf" />
+		</Tournament>
+		<Tournament Name="Open Team Challenge" BaseFolder="Tournament_Forms">
+			<Form DisplayName="Entry Form" FileName="openteamchallenge.pdf" />
+		</Tournament>
+		<Tournament Name="St. Paul City Mixed" BaseFolder="Tournaments/STPCityMixed">
+			<Form DisplayName="Singles" FileName="Singles.pdf" />
+			<Form DisplayName="Doubles" FileName="Doubles.pdf" />
+			<Form DisplayName="Mixed" FileName="Mixed.pdf" />
+			<Form DisplayName="All Events" FileName="AllEvents.pdf" />
+			<Form DisplayName="Prize List" FileName="PrizeList.pdf" />
+		</Tournament>
+		<Tournament Name="St. Paul Open" BaseFolder="Tournaments/STPOpen">
+			<Form DisplayName="Availability" FileName="stpaulopenavailability.pdf" />
+			<Form DisplayName="Singles" FileName="Singles.pdf" />
+			<Form DisplayName="Doubles" FileName="Doubles.pdf" />
+			<Form DisplayName="Team" FileName="Team.pdf" />
+			<Form DisplayName="All Events" FileName="AllEventsScratch.pdf" />
+			<Form DisplayName="All Events HDCP" FileName="AllEventsHDCP.pdf" />
+			<Form DisplayName="Prize List" FileName="PrizeList.pdf" />
+		</Tournament>
+		<Tournament Name="St. Paul Womens City" BaseFolder="Tournaments/WomensCity">
+			<Form DisplayName="Singles" FileName="rpttrncurrentstandings sngls.pdf" />
+			<Form DisplayName="Doubles" FileName="rpttrncurrentstandings dbls.pdf" />
+			<Form DisplayName="Team" FileName="rpttrncurrentstandings team.pdf" />
+			<Form DisplayName="All Events" FileName="rpttrncurrentstandings scratch ae.pdf" />
+			<Form DisplayName="All Events HDCP" FileName="rpttrncurrentstandings all events.pdf" />
+			<Form DisplayName="Award Results" FileName="womens_final_standing.pdf" />
+			<Form DisplayName="Prize Results" FileName="womens_prizes.pdf" />
+		</Tournament>
+		<Tournament Name="Womens Championships" BaseFolder="Tournament_Forms">
+			<Form DisplayName="Entry Form" FileName="womenschampionships.pdf" />
+		</Tournament>
+		<Tournament Name="Youth Championships" BaseFolder="Tournaments/YouthChampionship">
+			<Form DisplayName="Bumpers" FileName="YouthBumpers.pdf" />
+			<Form DisplayName="Singles" FileName="YouthSingles.pdf" />
+			<Form DisplayName="Doubles" FileName="YouthDoubles.pdf" />
+			<Form DisplayName="Team" FileName="YouthTeam.pdf" />
+			<Form DisplayName="All Events" FileName="YouthAllEventsScratch.pdf" />
+			<Form DisplayName="All Events HDCP" FileName="YouthAllEventsHDCP.pdf" />
+			<Form DisplayName="Award Results" FileName="AwardResults.pdf" />
+		</Tournament>
+		<Tournament Name="Youth USBC Championship" BaseFolder="Tournament_Forms">
+			<Form DisplayName="Entry Form" FileName="YouthUSBCChampionship.pdf" />
+		</Tournament>
+		<Tournament Name="St. Paul Senior Mixed" BaseFolder="Tournaments/SeniorMixed">
+			<Form DisplayName="Doubles" FileName="Doubles.pdf" />
+		</Tournament>
+        <Tournament Name="St. Paul Senior Masters" BaseFolder="Tournament_Forms">
+            <Form DisplayName="Entry Form" FileName="seniormasters.pdf"/>
+        </Tournament>
+		<Tournament Name="zEntry Forms" BaseFolder="Tournament_Forms">
+			<Form DisplayName="STP City Mixed" FileName="stpaulmixed.pdf" />
+			<Form DisplayName="STP Open" FileName="stpaulopen.pdf" />
+			<Form DisplayName="Womens City" FileName="StPaulWomensCity.pdf" />
+			<Form DisplayName="Youth Championships" FileName="youthchampionships.pdf" />
+		</Tournament>
+		<Tournament Name="zTest Upload" BaseFolder="Tournament_Forms">
+			<Form DisplayName="Test File" FileName="TestFile.pdf" />
+		</Tournament>
+        <Tournament Name="General Forms" BaseFolder="">
+            <Form DisplayName="Adult Award Form" FileName="awardform_adult.pdf" />
+            <Form DisplayName="Youth Award Form" FileName="awardform_youth.pdf" />
+        </Tournament>
+	</Tournaments>
+</Setting>

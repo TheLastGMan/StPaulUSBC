@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TeamAllEvents": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

@@ -1,0 +1,33 @@
+﻿CACHE MANIFEST
+#03/08/2013
+
+#forcefully cache these items
+CACHE:
+content/site.min.css
+content/mobile.min.css
+content/themes/base/jquery-ui-1.10.0.custom.min.css
+content/images/usbc_logo.jpg
+
+#no internet images
+content/images/nointernetglobe.png
+content/images/nointernet.jpg
+
+#fonts
+content/fonts/cardo104s.ttf
+content/fonts/huxtable.ttf
+
+#scripts
+scripts/jquery-1.8.0.min.js
+scripts/jquery-ui-1.10.0.custom.min.js
+scripts/commonbundle.min.js
+
+#do not cache following
+NETWORK:
+account/login
+login
+
+#replacements (match) (replace)
+FALLBACK:
+/content/images/ /content/images/nointernet.jpg
+/uploads/images/ /content/images/nointernetglobe.png
+/ /offline.html

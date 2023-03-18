@@ -1,0 +1,15 @@
+[
+  {
+    "outputFileName": "Content/usbc.css",
+    "inputFiles": [
+      "Content/Site.css",
+      "Content/themes/base/jquery-ui-1.10.0.custom.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/Mobile.min.css",
+    "inputFiles": [
+      "Content/Mobile.css"
+    ]
+  }
+]

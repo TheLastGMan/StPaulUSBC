@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDAD2F1D-7F91-4B4B-A03C-FC9F258E9BC9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Core.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Core.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Staging\</OutputPath>
+    <DocumentationFile>Core.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.BulkInsert">
+      <HintPath>..\packages\EntityFramework.BulkInsert-ef6.6.0.2.8\lib\Net45\EntityFramework.BulkInsert.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.MappingAPI">
+      <HintPath>..\packages\EntityFramework.MappingAPI.6.0.0.7\lib\net45\EntityFramework.MappingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.3.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\iTextSharp-5.5.10\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject-3.0.0.15-r-.net40-medium\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="RSSGenerator">
+      <HintPath>..\packages\RPGCor.RSSGenerator\Net40\RSSGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.3.0.20105.1\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DI\IoC.vb" />
+    <Compile Include="Model\SeasonAverageBowlerResult.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Plugin\IPluginInfo.vb" />
+    <Compile Include="Plugin\ITypeFinder.vb" />
+    <Compile Include="Plugin\PluginInfo.vb" />
+    <Compile Include="Plugin\PluginManager.vb" />
+    <Compile Include="Plugin\TypeFinder.vb" />
+    <Compile Include="RepositoryInterface\IEmailProfile.vb" />
+    <Compile Include="RepositoryInterface\IBoardHistory.vb" />
+    <Compile Include="RepositoryInterface\IAward.vb" />
+    <Compile Include="RepositoryInterface\IAwardDivision.vb" />
+    <Compile Include="RepositoryInterface\IAwardName.vb" />
+    <Compile Include="RepositoryInterface\IAwardType.vb" />
+    <Compile Include="RepositoryInterface\IBoard.vb" />
+    <Compile Include="RepositoryInterface\IBoardPosition.vb" />
+    <Compile Include="RepositoryInterface\ICrudInterface.vb" />
+    <Compile Include="RepositoryInterface\IHallOfFame.vb" />
+    <Compile Include="RepositoryInterface\IHallOfFame_RecognitionType.vb" />
+    <Compile Include="RepositoryInterface\IHomeLink.vb" />
+    <Compile Include="RepositoryInterface\IHonor.vb" />
+    <Compile Include="RepositoryInterface\IHonorCategory.vb" />
+    <Compile Include="RepositoryInterface\IHonorType.vb" />
+    <Compile Include="RepositoryInterface\ILink.vb" />
+    <Compile Include="RepositoryInterface\ILocalization.vb" />
+    <Compile Include="RepositoryInterface\IRole.vb" />
+    <Compile Include="RepositoryInterface\ISeasonAverage.vb" />
+    <Compile Include="RepositoryInterface\ISeasonAverageBowler.vb" />
+    <Compile Include="RepositoryInterface\ISetting.vb" />
+    <Compile Include="RepositoryInterface\ITopic.vb" />
+    <Compile Include="RepositoryInterface\ITournament.vb" />
+    <Compile Include="RepositoryInterface\ITournament_Classification.vb" />
+    <Compile Include="RepositoryInterface\IUser.vb" />
+    <Compile Include="RepositoryInterface\IUserRole.vb" />
+    <Compile Include="Repository\EmailProfile.vb" />
+    <Compile Include="Repository\Award.vb" />
+    <Compile Include="Repository\AwardDivision.vb" />
+    <Compile Include="Repository\AwardName.vb" />
+    <Compile Include="Repository\AwardType.vb" />
+    <Compile Include="Repository\Board.vb" />
+    <Compile Include="Repository\BoardHistory.vb" />
+    <Compile Include="Repository\BoardPosition.vb" />
+    <Compile Include="Repository\HallOfFame.vb" />
+    <Compile Include="Repository\HallOfFame_RecognitionType.vb" />
+    <Compile Include="Repository\HomeLink.vb" />
+    <Compile Include="Repository\Honor.vb" />
+    <Compile Include="Repository\HonorCategory.vb" />
+    <Compile Include="Repository\HonorType.vb" />
+    <Compile Include="Repository\Link.vb" />
+    <Compile Include="Repository\Localization.vb" />
+    <Compile Include="Repository\Role.vb" />
+    <Compile Include="Repository\SeasonAverage.vb" />
+    <Compile Include="Repository\SeasonAverageBowler.vb" />
+    <Compile Include="Repository\Setting.vb" />
+    <Compile Include="Repository\Topic.vb" />
+    <Compile Include="Repository\Tournament.vb" />
+    <Compile Include="Repository\Tournament_Classification.vb" />
+    <Compile Include="Repository\User.vb" />
+    <Compile Include="Repository\UserRole.vb" />
+    <Compile Include="Security\Encryption.vb" />
+    <Compile Include="Security\IEncryption.vb" />
+    <Compile Include="Services\Account\AccountService.vb" />
+    <Compile Include="Services\Account\IAccountService.vb" />
+    <Compile Include="Services\Account\LogInResult.vb" />
+    <Compile Include="Services\Bowling\ISeasonAverageService.vb" />
+    <Compile Include="Services\Bowling\SeasonAverageService.vb" />
+    <Compile Include="Services\Content\IPDFCreater.vb" />
+    <Compile Include="Services\Content\IRSSGen.vb" />
+    <Compile Include="Services\Content\ISearcher.vb" />
+    <Compile Include="Services\Content\RSSGen.vb" />
+    <Compile Include="Services\Content\Searcher.vb" />
+    <Compile Include="Services\HallOfFame\HallOfFameService.vb" />
+    <Compile Include="Services\HallOfFame\HOF_BriefModel.vb" />
+    <Compile Include="Services\HallOfFame\HOF_ProfilePicture.vb" />
+    <Compile Include="Services\HallOfFame\IHallOfFameService.vb" />
+    <Compile Include="Services\HallOfFame\SortMethod.vb" />
+    <Compile Include="Services\Content\PDFCreater.vb" />
+    <Compile Include="Services\Content\IEmailService.vb" />
+    <Compile Include="Services\UrlSrv\IUrlService.vb" />
+    <Compile Include="Services\Content\EmailService.vb" />
+    <Compile Include="Services\UrlSrv\UrlService.vb" />
+    <Compile Include="SiteMap\InternalProvider\GoogleProvider.vb" />
+    <Compile Include="SiteMap\ISitemapProvider.vb" />
+    <Compile Include="SiteMap\ISitemapService.vb" />
+    <Compile Include="SiteMap\SitemapService.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.vbproj">
+      <Project>{e1e5460d-37d3-4f15-aa14-c73873842ffe}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

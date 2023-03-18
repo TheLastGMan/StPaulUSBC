@@ -1,0 +1,939 @@
+﻿@font-face {
+    font-family: Title;
+    src: url('fonts/huxtable.eot');
+    src: url('fonts/huxtable.eot?#iefix') format('embedded-opentype'), url('fonts/huxtable.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Text;
+    src: url('fonts/cardo104.eot');
+    src: url('fonts/cardo104s.eot?#iefix') format('embedded-opentype'), url('fonts/cardo104s.ttf') format('opentype');
+}
+
+/*
+ Lt-Blue  :#092261
+ Dk-Blue  :#091961
+ Lt-Red   :#DE001E
+ Dk-Red   :#D40027
+ White    :#FFF
+*/
+
+/* Global */
+html {
+    min-height: 100%;
+    line-height: 1.0em;
+    /* Gradient */
+    background: #1346BF;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzEzNDZiZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTE5NjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #1346BF 0%, #091961 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1346BF), color-stop(100%,#091961));
+    background: -webkit-linear-gradient(top, #1346BF 0%,#091961 100%);
+    background: -o-linear-gradient(top, #1346BF 0%,#091961 100%);
+    background: -ms-linear-gradient(top, #1346BF 0%,#091961 100%);
+    background: linear-gradient(to bottom, #1346BF 0%,#091961 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1346BF', endColorstr='#091961',GradientType=0 );
+}
+
+body {
+    font-size: 14px;
+    font-family: Text, "Cambria", Verdana;
+    color: #000;
+    min-height: 100%; /* Opera/FireFox Fix for html gradient background */
+}
+
+.clearblank, .clearblank12 {
+    height: 0.9em;
+}
+
+.clearblank2 {
+    height: 2px;
+}
+
+.clearblank4 {
+    height: 4px;
+}
+
+h1 {
+    text-align: center;
+    margin: 15px auto;
+    font-size: 2.0em;
+}
+
+h2 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+}
+
+h2, h3 {
+    margin: 8px 2px 8px 10px;
+}
+
+/* Master Page */
+#container {
+    background-color: #FFF;
+    border: 3px solid #000;
+    min-width: 305px;
+    max-width: 1100px;
+    /*width:950px;*/
+    margin: 15px auto;
+    border-radius: 15px;
+}
+
+#header {
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 15px 15px 0 0;
+}
+
+    #header img {
+        border: none;
+    }
+
+    #header .title-text {
+        line-height: 1.0em;
+        font-family: Title, Georgia;
+        font-size: 2.25em;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+#footer {
+    text-align: center;
+    padding: 3px 0;
+    font-size: 0.8em;
+    line-height: 1.25em;
+    clear: both;
+    border-top: 2px solid #D40027;
+    border-radius: 0 0 15px 15px;
+}
+
+#content {
+    width: 100%;
+    float: left;
+}
+
+#MobileNav {
+    visibility: hidden;
+    height: 30px;
+    width: 30px;
+    background-color: #BBB;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 999;
+    border: 1px solid #000;
+    border-top: none;
+    border-left: none;
+}
+
+#LeftColumn {
+    width: 168px;
+    float: left;
+    margin: 5px;
+}
+
+#CenterColumn {
+    margin: 5px;
+    padding: 1px 5px;
+    margin-left: 178px;
+    min-height: 550px;
+    border: 1px solid #000;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 15px;
+}
+
+#navheader {
+    border: 2px solid #D40027;
+    border-right: none;
+    border-left: none;
+    height: 47px;
+}
+
+    #navheader div#nav {
+        display: none;
+    }
+
+.breadcrumb {
+    padding: 2px 0;
+    border-bottom: 1px solid #000;
+    text-align: left;
+}
+
+    .breadcrumb a {
+        padding: 3px 10px;
+        min-width: 50px;
+        margin: 2px;
+        background-color: #BBB;
+        color: #000;
+        border: 1px dotted #000;
+        line-height: 2.5em;
+        white-space: nowrap;
+        border-radius: 10px;
+    }
+
+        .breadcrumb a:hover {
+            background-color: #777;
+            -webkit-transition: background-color ease 500ms;
+            -moz-transition: background-color ease 500ms;
+            -o-transition: background-color ease 500ms;
+            transition: background-color ease 500ms;
+        }
+
+        .breadcrumb a:last-child {
+            margin-right: 3px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .breadcrumb a:first-child {
+            margin-left: 3px;
+            border-radius: 0 10px 10px 0;
+        }
+
+.showmobile {
+    display: none;
+}
+
+.hidemobile {
+    display: normal;
+}
+
+.pill-top {
+    font-weight: bold;
+    font-size: 1.25em;
+    background-color: #777;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #000;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+}
+
+.pill-bottom {
+    background-color: #BBB;
+    padding: 5px;
+    border: 1px solid #000;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Navigation */
+ul.ulink {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style-type: none;
+}
+
+    ul.ulink li {
+        margin: 0;
+        margin-right: 10px;
+    }
+
+        ul.ulink li:last-child a {
+            border-radius: 0 0 15px 15px;
+        }
+
+        ul.ulink li a {
+            display: block;
+            width: 100%;
+            padding: 2px 0;
+            padding-left: 10px;
+            color: #000;
+            text-decoration: none;
+            -webkit-transition: background-color ease 500ms;
+            -moz-transition: background-color ease 500ms;
+            -o-transition: background-color ease 500ms;
+            transition: background-color ease 500ms;
+        }
+
+            ul.ulink li a:hover {
+                background-color: #777;
+            }
+
+        ul.ulink li.selected a {
+            font-weight: bold;
+        }
+
+/* Pager */
+.pager {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+    .pager a {
+        color: #000;
+        display: block;
+        width: 100%;
+        max-width: 20px;
+        padding: 3px 5px;
+        margin: 0 2px;
+        display: inline-block;
+        border: 1px solid #000;
+        background-color: #fafad2;
+        border-radius: 15px;
+    }
+
+        .pager a:hover, .pager a.selected {
+            font-weight: bold;
+            background-color: #b8860b;
+            transition: background-color linear 500ms;
+            -webkit-transition: background-color linear 500ms;
+            -moz-transition: background-color linear 500ms;
+            -o-transition: background-color linear 500ms;
+        }
+
+/* Share Links */
+.sharelinks {
+    float: right;
+    width: 40%;
+    padding: 3px;
+    background-color: #FFF;
+}
+
+#searchform {
+    margin-top: 7px;
+    float: left;
+    width: 49%;
+}
+
+#searchsubmit {
+    border-radius: 0;
+    height: 28px;
+}
+
+/* Modal */
+div#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #555;
+    background-color: rgba(85,85,85,0.8);
+}
+
+    div#modal div {
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+        top: 50%;
+        border-radius: 30px;
+        border: 8px solid #000;
+        background-color: #888;
+    }
+
+        div#modal div table {
+            display: inline-table;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+/* Search */
+.searchcontainer {
+    margin: 5px 0;
+}
+
+    .searchcontainer div {
+        margin-bottom: 10px;
+    }
+
+/* Honor Scores */
+div.honorscoreheadercontainer {
+    float: left;
+    width: 100%;
+}
+
+    div.honorscoreheadercontainer .floatbox {
+        float: left;
+        width: 200px;
+        text-align: center;
+    }
+
+/* Honor Scores - Series */
+.scoreview {
+    width: 33%;
+    float: left;
+    text-align: center;
+    font-size: 0.93em;
+}
+
+.scoreview25 {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.profilename, .contentcontainer {
+    float: left;
+    width: 100%;
+}
+
+.contentcontainer {
+    padding: 5px 0 10px 0;
+    border-radius: 15px;
+    border: 1px solid #000;
+}
+
+.viewcontainer {
+    width: 100%;
+    float: left;
+}
+
+/* Award */
+.align-center {
+    text-align: center;
+}
+
+div#award-process {
+    display: block;
+    margin-left: 5%;
+    height: 4.1em;
+}
+
+.award-form .award-selection-container {
+    float: left;
+    width: 100px;
+    text-align: center;
+    height: 10.0em;
+    margin-right: 1%;
+    margin-bottom: 5px;
+}
+
+.award-form .award-selection-container-header {
+    font-weight: bold;
+    font-size: 1.05em;
+    margin-bottom: 5px;
+}
+
+.award-form .award-selection-container-content {
+    width: 75px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background-color: lightgoldenrodyellow;
+    border-radius: 100%;
+    box-shadow: 3px 3px 5px #999;
+    transition: background-color ease 0.5s;
+}
+
+    .award-form .award-selection-container-content:hover {
+        background-color: palegoldenrod;
+    }
+
+    .award-form .award-selection-container-content input[type=checkbox] {
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        cursor: pointer;
+        border-radius: 100%;
+    }
+
+    .award-form .award-selection-container-content label {
+        visibility: hidden;
+    }
+
+.award-process-box {
+    border: 1px solid #000;
+    float: left;
+    width: 16%;
+    height: 2.2em;
+    margin-right: 1%;
+    margin-bottom: 5px;
+    padding: 1%;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.award-process-status-inactive {
+    background-color: #777;
+    border-radius: 10px 0 0 10px;
+}
+
+.award-process-status-current {
+    background-color: #1346BF;
+    margin-top: -1px;
+    font-weight: bold;
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+.award-process-status-previous {
+    background-color: #BBB;
+    border-radius: 0 10px 10px 0;
+}
+
+div.award {
+    float: left;
+}
+
+    div.award .longbox, div.award .shortbox {
+        float: left;
+        text-align: center;
+        min-height: 80px;
+        margin: 5px;
+        background-color: #AAA;
+        border-radius: 15px;
+        border: 2px solid black;
+    }
+
+    div.award .longbox {
+        width: 230px;
+    }
+
+        div.award .longbox input {
+            width: 185px;
+        }
+
+    div.award .shortbox {
+        width: 125px;
+    }
+
+        div.award .shortbox input {
+            width: 85px;
+        }
+
+    div.award .fullbox, .fullbox, .local-award-choice {
+        float: left;
+        clear: both;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 5px;
+    }
+
+.no-clear {
+    clear: none !important;
+}
+
+/* Table Generics */
+table {
+    border-radius: 15px;
+    border-spacing: 0; /* supplement for cellspacing */
+    margin: 5px auto;
+}
+
+    table td {
+        padding: 5px 0; /* supplement for cellpadding*/
+        margin: 0;
+    }
+
+    table thead td, table tfoot td {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.25em;
+        background-color: #777;
+    }
+
+    table thead tr td:first-child {
+        border-radius: 12px 0 0 0;
+    }
+
+    table tfoot tr td {
+        border-radius: 0 0 12px 12px;
+    }
+
+    table thead tr td:last-child {
+        border-radius: 0 12px 0 0;
+    }
+
+    table tfoot {
+        line-height: 0.5em;
+    }
+
+/* Table Specifics */
+.HallOfFameTable, #tournament, #honorscores, #score-view,
+#score-view-game, .board-of-director, #topic_table,
+#ContentEditorCreate, #ManageLinks, #ManageTournaments,
+#EditTournament, #userprofile, #userroleinfo, #userprofileinfo,
+#managescore, #halloffame, #edithof, #managecategories, #hoftype,
+#manageboard, #boardpositions, #managenavigation, #manageusers, #awardoptiontable,
+#manageEmailProfile, #manageTournamentEmailProfile, #awardtable, #seasonaveragemanage, #tournament-email {
+    width: 95%;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+    #tournament-email tbody tr td:first-child {
+        text-align: right;
+        padding-right: 5px;
+    }
+
+    #tournament-email tbody tr td:last-child {
+        text-align: left;
+        padding-left: 5px;
+    }
+
+    #tournament-email #message-body textarea
+    {
+        width: 90%;
+        min-height: 150px;
+    }
+
+#edithonor, #managehonortype,
+#editboard, #createboard, #localization,
+#editprofile, #awardtypetable, #boardhistory,
+#editEmailProfile {
+    width: 80%;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+    #localization tr td:first-child {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+#login {
+    width: 35%;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+#printaward {
+    width: 75%;
+    border: 2px solid #000;
+    text-align: left;
+}
+
+    #printaward tbody tr td {
+        border-bottom: 1px dotted #000;
+        padding-left: 5px;
+    }
+
+    #printaward tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+#ContentEditorCreate, #ManageLinks, #EditTournament,
+#userroleinfo, #userprofileinfo, #edithonor, #edithof, #login,
+#editboard, #createboard, #editprofile, #awardtypetable,
+#seasonaveragemanage {
+    text-align: left;
+}
+
+    /* Dual Column Table Generics */
+
+    #ContentEditorCreate tbody tr td:first-child, #EditTournament tbody tr td:first-child,
+    #userroleinfo tbody tr td:first-child, #userprofileinfo tbody tr td:first-child,
+    #edithonor tbody tr td:first-child, #edithof tbody tr td:first-child,
+    #login tbody tr td:first-child,
+    #editboard tbody tr td:first-child, #createboard tbody tr td:first-child,
+    #editprofile tbody tr td:first-child, #awardtypetable tbody tr td:first-child,
+    #printaward tr td:first-child, #seasonaveragemanage tr td:first-child {
+        width: 50%;
+        text-align: right;
+    }
+
+/* Board Of Director */
+.board-of-director tr td:first-child {
+    width: 50%;
+}
+
+.board-of-director tbody td:first-child {
+    padding-left: 10px;
+}
+
+#boardcontainer {
+    float: left;
+    width: 100%;
+}
+
+    #boardcontainer h2 {
+        width: 100%;
+        float: left;
+    }
+
+    #boardcontainer a {
+        color: #000;
+    }
+
+.boardbox {
+    padding: 10px;
+    padding-top: 0;
+    float: left;
+    width: 29%;
+    margin: 5px 1% 5px 0;
+    border: 1px solid #000;
+    border-radius: 15px;
+    min-width: 175px;
+}
+
+/* Score View */
+#score-view tbody td:first-child, .board-of-director tbody td:first-child,
+.HallOfFameTable tbody td:first-child {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Hall of Fame */
+.HallOfFameTable thead td img {
+    margin-top: 5px;
+}
+
+/* Table Common */
+.CDE {
+    font-family: 'Courier New';
+}
+
+.deceased {
+    color: #D40027;
+    font-weight: bold;
+}
+
+.odd-line {
+    background-color: #BBB;
+}
+
+.even-line {
+    background-color: #AAA;
+}
+
+/* Season Averages */
+.seasonaveragesearchrow {
+    border-radius: 15px;
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+    .seasonaveragesearchrow h3 {
+        text-align: center;
+        padding-top: 5px;
+        font-size: 1.75em;
+        line-height: 1.25em;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .seasonaveragesearchrow h4 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.25em;
+        margin: 0 auto;
+    }
+
+    .seasonaveragesearchrow table {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        margin-top: 15px;
+        border-top: 1px solid #000;
+    }
+
+        .seasonaveragesearchrow table tr:first-child {
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: 5px 0;
+        }
+
+            .seasonaveragesearchrow table tr:first-child td {
+                border-bottom: 1px solid #000;
+            }
+
+        .seasonaveragesearchrow table .gridrow td {
+            border-bottom: 2px dashed #000;
+        }
+
+        .seasonaveragesearchrow table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .seasonaveragesearchrow table tr .multirow_column {
+            border-bottom: none;
+            border-right: 1px solid #000;
+        }
+
+.average-searchbox {
+    width: 75%;
+    margin: 0 auto 5px auto;
+    padding: 10px;
+    height: 10.0em;
+    text-align: center;
+    background-color: #CCC;
+    border: 1px solid #000;
+    border-radius: 30px 10px;
+}
+
+    .average-searchbox legend {
+        font-weight: bold;
+        border-radius: 5px;
+        border: 1px solid #000;
+        padding: 3px 5px;
+        background-color: #FFF;
+        text-align: left;
+        margin-left: 10%;
+    }
+
+.seasonaverageform {
+    float: left;
+    height: 10.0em;
+    width: 50%;
+    display: table;
+}
+
+/* Last Updated */
+.last-updated {
+    font-family: Verdana;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+/* Profile Image */
+#profile img, #edithof img, #createhof img {
+    height: 200px;
+    max-height: 200px;
+    border-radius: 15px;
+    border: 2px solid #D40027;
+    background-color: #000;
+    box-shadow: 3px 3px 4px 1px #444;
+}
+
+    .sort-icon img {
+        height: 1.0em;
+        border: none;
+        padding: 0 10px;
+    }
+
+/* SiteMap */
+.sitemap {
+    padding: 10px;
+}
+
+    .sitemap h2 {
+        margin: 0 0 10px 0;
+    }
+
+    .sitemap div h2 {
+        float: left;
+        width: 100%;
+    }
+
+    .sitemap .sitemapbox, div.rssfeed .floatbox {
+        width: 150px;
+        text-align: left;
+        padding: 5px;
+        float: left;
+    }
+
+        .sitemap a, div.rssfeed .floatbox a {
+            display: block;
+            padding: 5px;
+            transition: all linear 500ms;
+            -webkit-transition: all linear 500ms;
+            -moz-transition: all linear 500ms;
+            -o-transition: all linear 500ms;
+        }
+
+            .sitemap a:hover {
+                background-color: #777;
+            }
+
+/* RSS */
+.rssfeed img {
+    height: 16px;
+    position: relative;
+    top: -36px;
+}
+
+.rssfeed a {
+    margin-left: 15px;
+}
+
+/* Input */
+
+input {
+    border-radius: 15px;
+    padding: 2px 7px;
+}
+
+/* Input Buttons */
+
+a.linkbutton {
+    border-radius: 15px;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+}
+
+input[type=search] {
+    border-radius: 0;
+}
+
+input[type=submit], input[type=button], input[type=file], select, a.linkbutton {
+    min-width: 60px;
+    padding: 5px;
+    margin: 3px;
+    border: 1px solid #000;
+    font-family: Text;
+}
+
+select {
+    padding: 0;
+}
+
+input[type=submit]:hover, input[type=button]:hover, a.linkbutton:hover {
+    border-width: 2px;
+    padding: 4px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input[type=number] {
+    width: 40px;
+    border-radius: 0;
+}
+
+.submit-red {
+    background-color: #D40027;
+}
+
+.submit-ltgold, .submit-ltgold-selected {
+    background-color: #FAFAD2;
+}
+
+.submit-ltgold-selected, .submit-gold-selected {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.submit-green {
+    background-color: #9ACD32;
+}
+
+.submit-gold, .submit-gold-selected {
+    background-color: #B8860B;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #D40027;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 2px solid #D40027;
+    padding: 2px 7px;
+    background-color: #FDD;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #D40027;
+}
+
+.validation-summary-valid {
+    display: none;
+}
